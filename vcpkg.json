@@ -1,0 +1,9 @@
+{
+  "name" : "fastmediashare",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "3f34cf3a419872514c15a99f85ce9ac8b008cd68",
+  "dependencies" : [ {
+    "name" : "cxxopts",
+    "version>=" : "3.1.1"
+  } ]
+}

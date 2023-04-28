@@ -7,9 +7,15 @@
 
 #include "string"
 
-
 class server {
-    std::string generateUrl(std::string path, bool remoteAccess);
+ public:
+/**
+ * Generate the url from a path
+ * @param path media file path
+ * @param remote_access if true, return the url with public ip
+ * @return url of media file
+ */
+  static std::string GenerateUri(const std::string &path, bool remote_access);
 };
 
 #endif //FASTMEDIASHARE_SERVER_H

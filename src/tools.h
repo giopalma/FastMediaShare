@@ -11,11 +11,10 @@
 #include <curl/curl.h>
 
 class tools {
-public:
-    static std::string random_string(std::size_t length);
+ public:
+  static std::string RandomString(std::size_t length);
 
-    static std::string getPublicIp();
+  static std::string GetPublicIp();
 };
-
 
 #endif //FASTMEDIASHARE_TOOLS_H

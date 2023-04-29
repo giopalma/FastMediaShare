@@ -1,12 +1,13 @@
 #include <iostream>
 #include <cxxopts.hpp>
 #include "server/server.h"
+#include "tools.h"
 
 cxxopts::Options options("FastMediaShare", "Simple Media Share System");
 
 std::string version = "1.0.0";
 
-int main(int argc, char *argv[]) {
+void cli(int argc, char *argv[]) {
   options.add_options()
       ("h,help", "Print usage")
       ("s,share", "Share file", cxxopts::value<std::string>())
@@ -25,11 +26,21 @@ int main(int argc, char *argv[]) {
     // Stream media
     // feature: make a way to share commands and sync clients
     std::string path = result["share"].as<std::string>();
-    std::cout << server::GenerateUri(path, true) << std::endl;
+    if (result.count("public")) {
+      server::Run(tools::GetPublicIp(), 8000);
+    } else {
+      server::Run("localhost", 8000);
+    }
   }
 
   if (result.count("version")) {
     std::cout << "version: " << version << std::endl;
   }
+}
+
+int main(int argc, char *argv[]) {
+  server::init();
+  cli(argc, argv);
+  server::destroy();
   return 0;
 }

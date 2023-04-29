@@ -7,6 +7,7 @@ add_executable(FastMediaShare src/main.cpp src/server/server.cpp src/server/serv
 
 find_package(cxxopts CONFIG REQUIRED)
 find_package(CURL REQUIRED)
+find_package(oatpp CONFIG REQUIRED)
 include_directories(${CURL_INCLUDE_DIR})
-target_link_libraries(FastMediaShare PRIVATE cxxopts::cxxopts ${CURL_LIBRARIES})
+target_link_libraries(FastMediaShare PRIVATE cxxopts::cxxopts ${CURL_LIBRARIES} oatpp::oatpp)
 

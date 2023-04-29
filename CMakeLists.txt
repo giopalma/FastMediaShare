@@ -3,7 +3,7 @@ project(FastMediaShare)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(FastMediaShare src/main.cpp src/server/server.cpp src/server/server.h src/server/server.cpp src/server/server.h src/tools.cpp src/tools.h)
+add_executable(FastMediaShare src/main.cpp src/server/server.cpp src/server/server.h src/server/server.cpp src/server/server.h src/tools.cpp src/tools.h src/server/route/request_handler.cpp src/server/route/request_handler.h src/server/server_handler.cpp src/server/server_handler.h)
 
 find_package(cxxopts CONFIG REQUIRED)
 find_package(CURL REQUIRED)

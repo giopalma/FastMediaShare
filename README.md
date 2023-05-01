@@ -1,2 +1,2 @@
 # FastMediaShare
-FastMediaShare allows you to share video files easily and quickly by creating a link (with both local and remote access) for each of your video files to share with your friends to share your file.
+FastMediaShare is a file-sharing platform to facilitate rapid and efficient sharing of video files, by generating a unique link with both local and remote access, which can be easily shared with your intended recipients, enabling them to seamlessly access your files without the need of laborious sign-ins.
